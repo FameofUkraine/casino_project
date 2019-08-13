@@ -2,7 +2,9 @@
 
 namespace app\models;
 
+use function Sodium\crypto_box_keypair_from_secretkey_and_publickey;
 use Yii;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "article".
@@ -19,6 +21,7 @@ use Yii;
  * @property int $category_id
  *
  * @property Comment[] $comments
+ * @method clearCurrentTags()
  */
 class Article extends \yii\db\ActiveRecord
 {
@@ -62,6 +65,7 @@ class Article extends \yii\db\ActiveRecord
             'category_id' => 'Category ID',
         ];
     }
+
     public function saveImage($filename)
     {
         $this->image = $filename;
@@ -70,7 +74,7 @@ class Article extends \yii\db\ActiveRecord
 
     public function getImage()
     {
-        return ($this->image) ? '/uploads/' . $this->image: '/no-image.png';
+        return ($this->image) ? '/uploads/' . $this->image : '/no-image.png';
     }
 
     public function deleteImage()
@@ -78,6 +82,7 @@ class Article extends \yii\db\ActiveRecord
         $imageUploadModel = new ImageUpload();
         $imageUploadModel->deleteCurrentImage($this->image);
     }
+
     public function beforeDelete()
     {
         $this->deleteImage();
@@ -92,10 +97,40 @@ class Article extends \yii\db\ActiveRecord
     public function saveCategory($category_id)
     {
         $category = Category::findOne($category_id);
-        if ($category != null)
-        {
+        if ($category != null) {
             $this->link('category', $category);
             return true;
         }
+
     }
+
+    public function getTags()
+    {
+        return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
+            ->viaTable('article_tag', ['article_id' => 'id']);
+    }
+
+    public function getSelectedTags()
+    {
+        $selectedIds = $this->getTags()->select('id')->asArray()->all();
+        return ArrayHelper::getColumn($selectedIds, 'id');
+    }
+
+    public function saveTags($tags)
+    {
+
+        if (is_array($tags)) {
+            $this->clearCurrentTags();
+
+            foreach ($tags as $tag_id) {
+                $tag = Tag::findOne($tag_id);
+                $this->link('tags', $tag);
+            }
+        }
+    }
+
+        public function clearCurrentTags()
+        {
+            ArticleTag::deleteAll(['article_id' => $this->id]);
+        }
 }
