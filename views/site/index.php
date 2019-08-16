@@ -35,7 +35,7 @@ use yii\widgets\LinkPager;
                             </div>
                         </div>
                         <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> <?= $article->date ?></span>
+                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> <?= $article->getDate() ?></span>
                             <ul class="text-center pull-right">
                                 <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?= (int) $article->viewed ?>
                             </ul>
@@ -68,7 +68,7 @@ use yii\widgets\LinkPager;
 
                             <div class="p-content">
                                 <a href="#" class="text-uppercase"><?= $article->title?></a>
-                                <span class="p-date"><?= $article->date?></span>
+                                <span class="p-date"><?= $article->getDate()?></span>
 
                             </div>
                         </div>
@@ -90,7 +90,7 @@ use yii\widgets\LinkPager;
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase"><?= $article->title?></a>
-                                    <span class="p-date"><?= $article->date?></span>
+                                    <span class="p-date"><?= $article->getDate()?></span>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ use yii\widgets\LinkPager;
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase"><?= $article->title?></a>
-                                    <span class="p-date"><?= $article->date?></span>
+                                    <span class="p-date"><?= $article->getDate()?></span>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ use yii\widgets\LinkPager;
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase"><?= $article->title?></a>
-                                    <span class="p-date"><?= $article->date?></span>
+                                    <span class="p-date"><?= $article->getDate()?></span>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@ use yii\widgets\LinkPager;
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase"><?= $article->title?></a>
-                                    <span class="p-date"><?= $article->date?></span>
+                                    <span class="p-date"><?= $article->getDate()?></span>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ use yii\widgets\LinkPager;
                         <?php foreach ($categories as $category): ?>
                             <li>
                                 <a href="#"><?= $category->title?></a>
-                                <span class="post-count pull-right"> (<?= $category->getArticles() !== null ? $category->getArticles()->count(): 0;?>)</span>
+                                <span class="post-count pull-right"> (<?= $category->getArticlesCount();?>)</span>
                             </li>
                         <?php endforeach ?>
 
