@@ -72,7 +72,7 @@ class ArticleController extends Controller
     {
         $model = new Article();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveArticle()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -92,7 +92,7 @@ class ArticleController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->saveArticle()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -140,7 +140,8 @@ class ArticleController extends Controller
     {
         $model = new ImageUpload;
 
-        if (Yii::$app->request->isPost) {
+        if (Yii::$app->request->isPost)
+        {
             $article = $this->findModel($id);
             $file = UploadedFile::getInstance($model, 'image');
 
@@ -150,7 +151,7 @@ class ArticleController extends Controller
             }
         }
 
-        return $this->render('image'    , ['model' => $model]);
+        return $this->render('image', ['model' => $model]);
     }
 
     /**
@@ -161,8 +162,8 @@ class ArticleController extends Controller
     public function actionSetCategory($id)
     {
         $article = $this->findModel($id);
-        $selectedCategory = ($article->category) ? $article->category->id : '0';
-        //$selectedCategory = $article->category->id;
+        //$selectedCategory = ($article->category) ? $article->category->id : '0';
+        $selectedCategory = $article->category->id;
         $categories = ArrayHelper::map(Category::find()->all(), 'id', 'title');
 
         if (Yii::$app->request->isPost)
