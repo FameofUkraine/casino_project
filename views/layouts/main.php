@@ -77,18 +77,18 @@ PublicAsset::register($this);
             <div class="col-md-4">
                 <aside class="footer-widget">
                     <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
-                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                        accusam et justo duo dlores et ea rebum magna text ar koto din.
+                    <div class="about-content">If you are looking for transparent, unbiased casino and game reviews,
+                        real players' opinions and ratings, AskGamblers is the place to be. Over the past decade,
+                        we have built a trusted online casino portal, dedicated to guide players to a safe gambling experience.
                     </div>
                     <div class="address">
                         <h4 class="text-uppercase">contact Info</h4>
 
-                        <p> 14529/12 NK Streets, DC, KZ</p>
+                        <p> 10001 Wall Street, NY, NY</p>
 
-                        <p> Phone: +123 456 78900</p>
+                        <p> Phone: +981 777 78122</p>
 
-                        <p>mytreasure.com</p>
+                        <p>casino.loc</p>
                     </div>
                 </aside>
             </div>
@@ -108,18 +108,19 @@ PublicAsset::register($this);
                             <div class="item active">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p>Casino.loc is on a mission to provide current and accurate information
+                                            about online casinos worldwide, as well as offer players the opportunity
+                                            to resolve their issues transparently. We are to push boundaries and keep
+                                            inspiring this whole industry to honour players, work for them,
+                                            and deliver the best service there is.</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Kate</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>CEO, EmotionCasino</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -127,18 +128,19 @@ PublicAsset::register($this);
                             <div class="item">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p>Casino.loc is on a mission to provide current and accurate information
+                                            about online casinos worldwide, as well as offer players the opportunity
+                                            to resolve their issues transparently. We are to push boundaries and keep
+                                            inspiring this whole industry to honour players, work for them,
+                                            and deliver the best service there is.</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Kate</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>CEO, EmotionCasino</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -146,18 +148,19 @@ PublicAsset::register($this);
                             <div class="item">
                                 <div class="single-review">
                                     <div class="review-text">
-                                        <p>Lorem ipsum dolor sit amet, conssadipscing elitr, sed diam nonumy eirmod
-                                            tempvidunt ut labore et dolore magna aliquyam erat,sed diam voluptua. At
-                                            vero eos et accusam justo duo dolores et ea rebum.gubergren no sea takimata
-                                            magna aliquyam eratma</p>
+                                        <p>Casino.loc is on a mission to provide current and accurate information
+                                            about online casinos worldwide, as well as offer players the opportunity
+                                            to resolve their issues transparently. We are to push boundaries and keep
+                                            inspiring this whole industry to honour players, work for them,
+                                            and deliver the best service there is.</p>
                                     </div>
                                     <div class="author-id">
                                         <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
-                                            <h4>Sophia</h4>
+                                            <h4>Kate</h4>
 
-                                            <h4>CEO, ReadyTheme</h4>
+                                            <h4>CEO, EmotionCasino</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -177,8 +180,8 @@ PublicAsset::register($this);
                             <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                         </div>
                         <div>
-                            <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                            <span class="p-date">February 15, 2016</span>
+                            <a href="#" class="text-uppercase">Win a Share of The Progressive Pot Every Week at Cleopatra Casino</a>
+                            <span class="p-date">May 15, 2018</span>
                         </div>
                     </div>
                 </aside>
@@ -189,7 +192,7 @@ PublicAsset::register($this);
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="text-center">&copy; 2015 <a href="#">Clever MIND, </a> Built with <i
+                    <div class="text-center">&copy; 2019 <a href="#">Clever MIND, </a> Built with <i
                                 class="fa fa-heart"></i> by <a href="#">Zhonochyn</a>
                     </div>
                 </div>
